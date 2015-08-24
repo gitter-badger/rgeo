@@ -104,7 +104,7 @@ module RGeo
         end
         @coord_sys = opts_[:coord_sys]
         if @coord_sys.kind_of?(::String)
-          @coord_sys = CoordSys::CS.create_from_wkt(@coord_sys) rescue nil
+          @coord_sys = CoordSys::CS.create_from_wkt(@coord_sys)
         end
         if (!@proj4 || !@coord_sys) && @srid && (db_ = opts_[:srs_database])
           entry_ = db_.get(@srid.to_i)

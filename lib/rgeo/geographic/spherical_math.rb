@@ -110,7 +110,7 @@ module RGeo
           rx_ = rhs_.x
           ry_ = rhs_.y
           rz_ = rhs_.z
-          PointXYZ.new(@y*rz_-@z*ry_, @z*rx_-@x*rz_, @x*ry_-@y*rx_) rescue nil
+          PointXYZ.new(@y*rz_-@z*ry_, @z*rx_-@x*rz_, @x*ry_-@y*rx_)
         end
 
 

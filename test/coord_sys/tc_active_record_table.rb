@@ -44,7 +44,7 @@ module RGeo
     module CoordSys  # :nodoc:
       module ActiveRecordTableTests  # :nodoc:
 
-        database_configs_ = ::YAML.load_file(::File.dirname(__FILE__)+'/database.yml') rescue nil
+        database_configs_ = ::YAML.load_file(::File.dirname(__FILE__)+'/database.yml')
         if database_configs_
           begin
             require 'active_record'
@@ -55,7 +55,7 @@ module RGeo
 
         if database_configs_
 
-          PostGIS_CONFIG = database_configs_['postgis'] rescue nil
+          PostGIS_CONFIG = database_configs_['postgis']
 
 
           if PostGIS_CONFIG

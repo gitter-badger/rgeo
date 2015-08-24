@@ -65,7 +65,7 @@ module RGeo
         srid_ = opts_[:srid]
         @coord_sys = opts_[:coord_sys]
         if @coord_sys.kind_of?(::String)
-          @coord_sys = CoordSys::CS.create_from_wkt(@coord_sys) rescue nil
+          @coord_sys = CoordSys::CS.create_from_wkt(@coord_sys)
         end
         if (!@proj4 || !@coord_sys) && srid_ && (db_ = opts_[:srs_database])
           entry_ = db_.get(srid_.to_i)
@@ -270,63 +270,63 @@ module RGeo
       # See ::RGeo::Feature::Factory#point
 
       def point(x_, y_, *extra_)
-        PointImpl.new(self, x_, y_, *extra_) rescue nil
+        PointImpl.new(self, x_, y_, *extra_)
       end
 
 
       # See ::RGeo::Feature::Factory#line_string
 
       def line_string(points_)
-        LineStringImpl.new(self, points_) rescue nil
+        LineStringImpl.new(self, points_)
       end
 
 
       # See ::RGeo::Feature::Factory#line
 
       def line(start_, end_)
-        LineImpl.new(self, start_, end_) rescue nil
+        LineImpl.new(self, start_, end_)
       end
 
 
       # See ::RGeo::Feature::Factory#linear_ring
 
       def linear_ring(points_)
-        LinearRingImpl.new(self, points_) rescue nil
+        LinearRingImpl.new(self, points_)
       end
 
 
       # See ::RGeo::Feature::Factory#polygon
 
       def polygon(outer_ring_, inner_rings_=nil)
-        PolygonImpl.new(self, outer_ring_, inner_rings_) rescue nil
+        PolygonImpl.new(self, outer_ring_, inner_rings_)
       end
 
 
       # See ::RGeo::Feature::Factory#collection
 
       def collection(elems_)
-        GeometryCollectionImpl.new(self, elems_) rescue nil
+        GeometryCollectionImpl.new(self, elems_)
       end
 
 
       # See ::RGeo::Feature::Factory#multi_point
 
       def multi_point(elems_)
-        MultiPointImpl.new(self, elems_) rescue nil
+        MultiPointImpl.new(self, elems_)
       end
 
 
       # See ::RGeo::Feature::Factory#multi_line_string
 
       def multi_line_string(elems_)
-        MultiLineStringImpl.new(self, elems_) rescue nil
+        MultiLineStringImpl.new(self, elems_)
       end
 
 
       # See ::RGeo::Feature::Factory#multi_polygon
 
       def multi_polygon(elems_)
-        MultiPolygonImpl.new(self, elems_) rescue nil
+        MultiPolygonImpl.new(self, elems_)
       end
 
 

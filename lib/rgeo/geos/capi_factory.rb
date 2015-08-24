@@ -105,7 +105,7 @@ module RGeo
           end
           coord_sys_ = opts_[:coord_sys]
           if coord_sys_.kind_of?(::String)
-            coord_sys_ = CoordSys::CS.create_from_wkt(coord_sys_) rescue nil
+            coord_sys_ = CoordSys::CS.create_from_wkt(coord_sys_)
           end
           if (!proj4_ || !coord_sys_) && srid_ && (db_ = opts_[:srs_database])
             entry_ = db_.get(srid_.to_i)
@@ -353,7 +353,7 @@ module RGeo
         if extra_.length > (_flags & 6 == 0 ? 0 : 1)
           nil
         else
-          CAPIPointImpl.create(self, x_, y_, extra_[0].to_f) rescue nil
+          CAPIPointImpl.create(self, x_, y_, extra_[0].to_f)
         end
       end
 
@@ -362,14 +362,14 @@ module RGeo
 
       def line_string(points_)
         points_ = points_.to_a unless points_.kind_of?(::Array)
-        CAPILineStringImpl.create(self, points_) rescue nil
+        CAPILineStringImpl.create(self, points_)
       end
 
 
       # See ::RGeo::Feature::Factory#line
 
       def line(start_, end_)
-        CAPILineImpl.create(self, start_, end_) rescue nil
+        CAPILineImpl.create(self, start_, end_)
       end
 
 
@@ -377,7 +377,7 @@ module RGeo
 
       def linear_ring(points_)
         points_ = points_.to_a unless points_.kind_of?(::Array)
-        CAPILinearRingImpl.create(self, points_) rescue nil
+        CAPILinearRingImpl.create(self, points_)
       end
 
 
@@ -385,7 +385,7 @@ module RGeo
 
       def polygon(outer_ring_, inner_rings_=nil)
         inner_rings_ = inner_rings_.to_a unless inner_rings_.kind_of?(::Array)
-        CAPIPolygonImpl.create(self, outer_ring_, inner_rings_) rescue nil
+        CAPIPolygonImpl.create(self, outer_ring_, inner_rings_)
       end
 
 
@@ -393,7 +393,7 @@ module RGeo
 
       def collection(elems_)
         elems_ = elems_.to_a unless elems_.kind_of?(::Array)
-        CAPIGeometryCollectionImpl.create(self, elems_) rescue nil
+        CAPIGeometryCollectionImpl.create(self, elems_)
       end
 
 
@@ -401,7 +401,7 @@ module RGeo
 
       def multi_point(elems_)
         elems_ = elems_.to_a unless elems_.kind_of?(::Array)
-        CAPIMultiPointImpl.create(self, elems_) rescue nil
+        CAPIMultiPointImpl.create(self, elems_)
       end
 
 
@@ -409,7 +409,7 @@ module RGeo
 
       def multi_line_string(elems_)
         elems_ = elems_.to_a unless elems_.kind_of?(::Array)
-        CAPIMultiLineStringImpl.create(self, elems_) rescue nil
+        CAPIMultiLineStringImpl.create(self, elems_)
       end
 
 
@@ -417,7 +417,7 @@ module RGeo
 
       def multi_polygon(elems_)
         elems_ = elems_.to_a unless elems_.kind_of?(::Array)
-        CAPIMultiPolygonImpl.create(self, elems_) rescue nil
+        CAPIMultiPolygonImpl.create(self, elems_)
       end
 
 
