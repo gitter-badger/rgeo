@@ -1,8 +1,26 @@
-## RGeo
+## (Forked) RGeo
+
+[![Join the chat at https://gitter.im/oegr/rgeo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/oegr/rgeo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+### Disclaimer
+
+Hi,
+
+As the official RGeo repo seems dead, I forked the project in order to help the community 
+to continue the work done by previous maintainer.
+
+Everyone is welcome for PRs.
+If you want to become a maintainer with me, just ask ;)
+I'll need help !
+
+### Statuses
+
+[![Build Status](https://travis-ci.org/oegr/rgeo.svg?branch=master)](https://travis-ci.org/oegr/rgeo)
+
+### Summary
 
 RGeo is a geospatial data library for Ruby.
 
-### Summary
 
 RGeo is a key component for writing location-aware applications in the Ruby
 programming language. At its core is an implementation of the industry
@@ -131,9 +149,6 @@ Source code is hosted on Github at http://github.com/rgeo/rgeo
 
 Contributions are welcome. Fork the project on Github.
 
-Build status: [<img src="https://secure.travis-ci.org/rgeo/rgeo.png"
-/>](http://travis-ci.org/rgeo/rgeo)
-
 Report bugs on Github issues at http://github.com/rgeo/rgeo/issues
 
 Support available on the rgeo-users google group at
@@ -157,30 +172,6 @@ by J Smith (http://github.com/dark-panda).
 
 ### License
 
-Copyright 2010-2012 Daniel Azuma
+Copyright 2012 Daniel Azuma
 
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-*   Redistributions of source code must retain the above copyright notice,
-    this list of conditions and the following disclaimer.
-*   Redistributions in binary form must reproduce the above copyright notice,
-    this list of conditions and the following disclaimer in the documentation
-    and/or other materials provided with the distribution.
-*   Neither the name of the copyright holder, nor the names of any other
-    contributors to this software, may be used to endorse or promote products
-    derived from this software without specific prior written permission.
-
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+https://github.com/rgeo/rgeo/blob/master/LICENSE.txt
